@@ -1,8 +1,8 @@
 from mechanize import Browser
 import urllib2
 
-roll = "me12b033"
-password= "#J5+1qOn"
+roll = ""
+password= ""
 
 # New browser object
 br = Browser()
