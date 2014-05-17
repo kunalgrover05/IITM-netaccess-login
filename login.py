@@ -1,6 +1,9 @@
 from mechanize import Browser
 import urllib2
 
+roll = "me12b033"
+password= "#J5+1qOn"
+
 # New browser object
 br = Browser()
 
@@ -10,8 +13,8 @@ page = br.open( 'https://netaccess.iitm.ac.in/account/login' )
 br.select_form( nr = 0 )
 
 # Fill in the fields
-br.form[ "userLogin" ] = "me12b033"
-br.form[ "userPassword" ] = "#J5+1qOn"
+br.form[ "userLogin" ] = roll
+br.form[ "userPassword" ] = password
 
 # Submit to login
 br.submit()
@@ -60,6 +63,8 @@ resp.set_data( hardcoded_resp )
 br.set_response( resp )
 # Filling the form using the hardcoded response
 br.select_form( nr = 0 )
+
+# Set duration as 1 for one hour and 2 for one day
 br.form[ 'duration' ] = [ '2' ]
 response = br.submit()
-print "Logged in for one day"
+print "Logged in"
